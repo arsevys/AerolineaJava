@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ListarAvionesComponent } from './avion/listarAviones.component';
+import { InsertarAvionComponent } from './avion/insertarAvion.component';
+import { InsertarPasajeroComponent } from './pasajero/insertarPasajero.component';
 
 import { MatDatepickerModule} from '@angular/material/datepicker';
 import { LoginService } from './login/login.service';
@@ -37,7 +39,9 @@ import { TotalVentasComponent } from './pasajero/totalVentas.component';
     HomeComponent,
     LoginComponent,
     ListarAvionesComponent,
-    TotalVentasComponent
+    TotalVentasComponent,
+    InsertarAvionComponent,
+    InsertarPasajeroComponent
   ], 
   imports: [
     BrowserModule,
@@ -57,7 +61,9 @@ import { TotalVentasComponent } from './pasajero/totalVentas.component';
       {path: 'home', component: HomeComponent},
       {path: 'login', component: LoginComponent},
       {path: 'listarAviones', component: ListarAvionesComponent},
-      {path: 'totalVentas', component: TotalVentasComponent}
+      {path: 'totalVentas', component: TotalVentasComponent},
+      {path: 'insertarAvion', component: InsertarAvionComponent},
+      {path: 'insertarPasajero', component: InsertarPasajeroComponent}
     ])
   ],
   schemas: [NO_ERRORS_SCHEMA],
