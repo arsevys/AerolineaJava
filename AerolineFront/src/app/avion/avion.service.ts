@@ -6,7 +6,7 @@ import { map, catchError } from 'rxjs/operators'
 
 @Injectable()
 export class AvionService {
-    private _getAvionURL: string = 'https://oculus.serveo.net/ProyAerolinea_Servicio/aviones/listaAviones';
+    private _getAvionURL: string = 'http://djvq.tk:8080/ProyAerolinea_Servicio/aviones/listaAviones';
 
     constructor(private _http: Http) {
     }

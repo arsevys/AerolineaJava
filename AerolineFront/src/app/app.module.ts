@@ -30,6 +30,11 @@ import { Usuario } from './login/usuario';
 import { AvionService } from './avion/avion.service';
 import { PasajeroService } from './pasajero/pasajero.service';
 import { TotalVentasComponent } from './pasajero/totalVentas.component';
+import { AndyComponent } from './avion/andy.component';
+import { DestinosComponent } from './vuelos/destinos.component';
+import { VuelosSalidasComponent } from './vuelos/vuelossalida.component';
+import { DestinoService } from './vuelos/destino.service';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +42,10 @@ import { TotalVentasComponent } from './pasajero/totalVentas.component';
     HomeComponent,
     LoginComponent,
     ListarAvionesComponent,
-    TotalVentasComponent
+    TotalVentasComponent,
+    AndyComponent,
+    DestinosComponent,
+    VuelosSalidasComponent
   ], 
   imports: [
     BrowserModule,
@@ -57,7 +65,9 @@ import { TotalVentasComponent } from './pasajero/totalVentas.component';
       {path: 'home', component: HomeComponent},
       {path: 'login', component: LoginComponent},
       {path: 'listarAviones', component: ListarAvionesComponent},
-      {path: 'totalVentas', component: TotalVentasComponent}
+      {path: 'totalVentas', component: TotalVentasComponent},
+       {path: 'destinos', component: DestinosComponent},
+        {path: 'salidaVuelo', component: VuelosSalidasComponent}
     ])
   ],
   schemas: [NO_ERRORS_SCHEMA],
@@ -66,7 +76,8 @@ import { TotalVentasComponent } from './pasajero/totalVentas.component';
     LoginService,
     Usuario,
     AvionService,
-    PasajeroService
+    PasajeroService,
+    DestinoService
   ],
   bootstrap: [AppComponent] 
 })

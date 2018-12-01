@@ -25,11 +25,12 @@
             </thead>
             <tbody>
                 <tr *ngFor="let avion of aviones">
-                    <td>{{avion.Codigo}}</td>
-                    <td>{{avion.Fabricante}}</td>
-                    <td>{{avion.Modelo}}</td>
-                    <td>{{avion.AnioFabriacion}}</td>
-                    <td>{{avion.Capacidad}}</td>
+                    <td>*</td>
+                    <td>{{avion.codigo_avion}}</td>
+                    <td>{{avion.fabricante}}</td>
+                    <td>{{avion.modelox}}</td>
+                    <td>{{avion["año_fabricacion"]}}</td>
+                    <td>{{avion.capacidad}}</td>
                 </tr>
             </tbody>
         </table>

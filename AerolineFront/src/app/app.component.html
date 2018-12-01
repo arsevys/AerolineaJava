@@ -39,7 +39,7 @@
           <button style="color: white" mat-button class="colorButon" [routerLink]="['/listarAviones']">Aviones</button>
         </li>
         <li class="nav-item">
-          <button style="color: white" mat-button class="colorButon" [routerLink]="['/reservaHabitacion']">Salida vuelo</button>
+          <button style="color: white" mat-button class="colorButon" [routerLink]="['/salidaVuelo']">Salida vuelo</button>
         </li>
         <li class="nav-item">
           <button style="color: white" mat-button class="colorButon" [matMenuTriggerFor]="menu">Reportes</button>
@@ -74,7 +74,7 @@
 <!-- <app-home></app-home>  (click)="salir()"  -->
 <mat-menu #menu="matMenu">
   <button [routerLink]="['/totalVentas']" mat-menu-item>Total venta</button>
-  <button mat-menu-item>Destinos</button>
+  <button [routerLink]="['/destinos']" mat-menu-item>Destinos</button>
   <button mat-menu-item>Psajeros</button>
 </mat-menu>
  
