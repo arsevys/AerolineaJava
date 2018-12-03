@@ -16,7 +16,8 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>ID</th>
+                   
+                    <th>Id</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
@@ -29,16 +30,16 @@
             </thead>
             <tbody>
                 <tr *ngFor="let pasajero of pasajeros">
-                    <td>{{pasajero.ID}}</td>
-                    <td>{{pasajero.Fabricante}}</td>
-                    <td>{{pasajero.Nombre}}</td>
-                    <td>{{pasajero.Apellido}}</td>
-                    <td>{{pasajero.Email}}</td>
-                    <td>{{pasajero.NumDocumento}}</td>
-                    <td>{{pasajero.Pais}}</td>
-                    <td>{{pasajero.Telefono}}</td>
-                    <td>{{pasajero.TipoDocumento}}</td>
-                    <td>{{pasajero.TotalVenta}}</td>
+                       <td>#</td>
+                    <td>{{pasajero.pasajero.id}}</td>
+                    <td>{{pasajero.pasajero.nombre}}</td>
+                    <td>{{pasajero.pasajero.apellido}}</td>
+                    <td>{{pasajero.pasajero.email}}</td>
+                    <td>{{pasajero.pasajero.num_documento}}</td>
+                    <td>{{pasajero.pasajero.pais.descripcion}}</td>
+                    <td>{{pasajero.pasajero.telefono}}</td>
+                    <td>{{pasajero.pasajero.tipo_documento}}</td>
+                    <td>{{pasajero.totalVenta}}</td>
 
                 </tr>
             </tbody>

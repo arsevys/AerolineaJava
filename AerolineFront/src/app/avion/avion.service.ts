@@ -7,7 +7,9 @@ import { map, catchError } from 'rxjs/operators'
 @Injectable()
 export class AvionService {
     private _getAvionURL: string = 'http://djvq.tk:8080/ProyAerolinea_Servicio/aviones/listaAviones';
+
     private _insertarAvionURL: string = "http://localhost:55349/api/habitacion/reservaHabitacion";
+
 
     constructor(private _http: Http) {
     }

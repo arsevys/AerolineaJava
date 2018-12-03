@@ -21,10 +21,7 @@ export class ListarAvionesComponent{
             },
             
         ); 
-        /*this._avionSerive.GetAviones()
-        .subscribe(
-            data => this.aviones = data
-        );*/
+
     }
 
 }

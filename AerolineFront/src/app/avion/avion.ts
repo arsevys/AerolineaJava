@@ -1,7 +1,7 @@
 export class Avion{
-    AnioFabriacion: string;
-    Capacidad: string;
-    Codigo: string;
-    Fabricante: string;
-    Modelo: string;
+    fabricante: string;
+    capacidad: string;
+    cod_avion: string;
+    año_fabricacion: string;
+    modelo: string;
 }
