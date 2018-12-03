@@ -1,0 +1,246 @@
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+
+<div class="container" style="margin-top: 30px">
+
+    <form class="form-horizontal" [formGroup]="formRegistrarUsuario">
+        <!-- action=" " method="post" id="contact_form"-->
+
+
+        <!-- Form Name -->
+        <legend style="text-align: center">Registrar Pasajero</legend>
+
+        <div class="form-group">
+            <label class="col-md-5 control-label" for="emailaddress">ID</label>
+            <div class="col-md-5 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input formControlName="name" [(ngModel)]="pasajero.ID" [ngModelOptions]="{standalone: true}"
+                        type="email" id="inputEmail" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+                        placeholder="ID" required autofocus>
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback" style="margin-top: -15px">
+                        <div *ngIf="f.name.errors.required">El ID es requerido</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="form-group">
+            <label class="col-md-5 control-label">Department / Office</label>
+            <div class="col-md-5 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="department" class="form-control selectpicker">
+                        <option value="">Select your Department/Office</option>
+                        <option>Department of Engineering</option>
+                        <option>Department of Agriculture</option>
+                        <option>Accounting Office</option>
+                        <option>Tresurer's Office</option>
+                        <option>MPDC</option>
+                        <option>MCTC</option>
+                        <option>MCR</option>
+                        <option>Mayor's Office</option>
+                        <option>Tourism Office</option>
+                    </select>
+                </div>
+            </div>
+        </div>-->
+
+  
+
+        <div class="form-group">
+            <label class="col-md-5 control-label">Nombre</label>
+            <div class="col-md-5 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input formControlName="apePat" name="user_name" placeholder="Nombre" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" type="text" [(ngModel)]="pasajero.Nombre"
+                        [ngModelOptions]="{standalone: true}" required="">
+                    <div *ngIf="submitted && f.apePat.errors" class="invalid-feedback" style="margin-top: -15px">
+                        <div *ngIf="f.apePat.errors.required">Nombre es requerido</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-5 control-label">Apellido</label>
+            <div class="col-md-5 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input formControlName="apeMat" name="user_name" placeholder="Apellido" required="" class="form-control"
+                        type="text" [(ngModel)]="pasajero.Apellido" [ngClass]="{ 'is-invalid': submitted && f.apeMat.errors }"
+                        [ngModelOptions]="{standalone: true}">
+                    <div *ngIf="submitted && f.apeMat.errors" class="invalid-feedback" style="margin-top: -15px">
+                        <div *ngIf="f.apeMat.errors.required">Apellido es requerido</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-5 control-label">Email</label>
+            <div class="col-md-5 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input formControlName="dni" [ngClass]="{ 'is-invalid': submitted && f.dni.errors }" name="first_name"
+                            placeholder="Email" class="form-control input-md" required="" [(ngModel)]="pasajero.Email"
+                            [ngModelOptions]="{standalone: true}">
+                        <div *ngIf="submitted && f.dni.errors" class="invalid-feedback" style="margin-top: -15px">
+                            <div *ngIf="f.dni.errors.required">Email requerido</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="form-group">
+                <label class="col-md-5 control-label">N Documento</label>
+                <div class="col-md-5 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" name="email"
+                            placeholder="N Documento" required="" class="form-control" type="text" [(ngModel)]="pasajero.NumDocumento"
+                            [ngModelOptions]="{standalone: true}">
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback" style="margin-top: -15px">
+                            <div *ngIf="f.email.errors.required">N Documento es requerido</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-5 control-label">Tipo Documento</label>
+                <div class="col-md-5 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input formControlName="tDocumento" [ngClass]="{ 'is-invalid': submitted && f.tDocumento.errors }" name="email"
+                            placeholder="Tipo Documento" required="" class="form-control" type="text" [(ngModel)]="pasajero.TipoDocumento"
+                            [ngModelOptions]="{standalone: true}">
+                        <div *ngIf="submitted && f.tDocumento.errors" class="invalid-feedback" style="margin-top: -15px">
+                            <div *ngIf="f.tDocumento.errors.required">Tipo Documento es requerido</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-5 control-label">Pais</label>
+                <div class="col-md-5 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input formControlName="pais" [ngClass]="{ 'is-invalid': submitted && f.pais.errors }" name="pais"
+                            placeholder="N Documento" required="" class="form-control" type="text" [(ngModel)]="pasajero.Pais"
+                            [ngModelOptions]="{standalone: true}">
+                        <div *ngIf="submitted && f.pais.errors" class="invalid-feedback" style="margin-top: -15px">
+                            <div *ngIf="f.pais.errors.required">N Documento es requerido</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-5 control-label">Telefono</label>
+                <div class="col-md-5 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input formControlName="telefono" [ngClass]="{ 'is-invalid': submitted && f.telefono.errors }" name="email"
+                            placeholder="Telefono" required="" class="form-control" type="text" [(ngModel)]="pasajero.Telefono"
+                            [ngModelOptions]="{standalone: true}">
+                        <div *ngIf="submitted && f.telefono.errors" class="invalid-feedback" style="margin-top: -15px">
+                            <div *ngIf="f.telefono.errors.required">Telefono es requerido</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-5 control-label"></label>
+                <div class="col-md-5"><br>
+                    <button (click)="insertarPasajero()" type="submit" class="btn btn-primary">REGISTRAR
+                        <span class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </div>
+
+
+    </form>
+</div>
+
+
+<!-- /.container -->
+
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="card" style="margin: 0 auto; width: 600px; margin-top: 30px">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Registrar Usuario</strong>
+    </h5>
+
+
+    <div class="card-body px-lg-5 pt-0">
+
+        <form class="text-center">
+
+            <div class="form-row">
+           
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Dni : " class="form-control" [(ngModel)]="usuario.DNI"
+                        [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+            </div>
+
+            <div class="form-row">
+     
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nombre : " class="form-control" [(ngModel)]="usuario.Nombre"
+                        [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+            </div>
+
+            <div class="form-row">
+    
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Apellido Paterno : " class="form-control" [(ngModel)]="usuario.ApellidoPaterno"
+                        [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+            </div>
+
+        
+            <div class="form-row">
+   
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Apellido Materno : " class="form-control" [(ngModel)]="usuario.ApellidoMaterno"
+                        [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+            </div>
+
+            <div class="md-form mt-0">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email: " class="form-control" [(ngModel)]="usuario.Correo"
+                        [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+            </div>
+
+       
+            <div class="md-form">
+                <mat-form-field class="example-full-width">
+                    <input type="password" matInput placeholder="Password : " class="form-control" [(ngModel)]="usuario.Password"
+                        [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+            </div>
+
+            <button (click)="ingreseUsuario()" class="btn btn-outline-info btn-rounded btn-block my-10 waves-effect z-depth-0"
+                type="submit">Registrarse </button>
+        </form>
+  
+    </div>
+</div>-->
