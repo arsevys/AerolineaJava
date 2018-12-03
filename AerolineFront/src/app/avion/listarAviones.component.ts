@@ -16,11 +16,11 @@ export class ListarAvionesComponent{
     constructor(private formBuilder: FormBuilder, private _avionSerive: AvionService, private _router: Router){
         this._avionSerive.GetAviones()
         .subscribe(
-
-            data =>{
-             this.aviones = data;
-               console.log(this.aviones,86532);}
-        );
+            data => {this.aviones = data;
+                console.log(this.aviones)
+            },
+            
+        ); 
 
     }
 

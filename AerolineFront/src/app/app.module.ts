@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ListarAvionesComponent } from './avion/listarAviones.component';
+import { InsertarAvionComponent } from './avion/insertarAvion.component';
+import { InsertarPasajeroComponent } from './pasajero/insertarPasajero.component';
 
 import { MatDatepickerModule} from '@angular/material/datepicker';
 import { LoginService } from './login/login.service';
@@ -43,6 +45,8 @@ import { DestinoService } from './vuelos/destino.service';
     LoginComponent,
     ListarAvionesComponent,
     TotalVentasComponent,
+    InsertarAvionComponent,
+    InsertarPasajeroComponent
     AndyComponent,
     DestinosComponent,
     VuelosSalidasComponent
@@ -66,6 +70,8 @@ import { DestinoService } from './vuelos/destino.service';
       {path: 'login', component: LoginComponent},
       {path: 'listarAviones', component: ListarAvionesComponent},
       {path: 'totalVentas', component: TotalVentasComponent},
+      {path: 'insertarAvion', component: InsertarAvionComponent},
+      {path: 'insertarPasajero', component: InsertarPasajeroComponent}
        {path: 'destinos', component: DestinosComponent},
         {path: 'salidaVuelo', component: VuelosSalidasComponent}
     ])
